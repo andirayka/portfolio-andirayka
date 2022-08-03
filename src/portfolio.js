@@ -21,27 +21,30 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: 'Project 1',
+    name: 'IntegraOffice Cloud',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'A mailing application to send mail, disposition, and instruction within one instituion.',
+    stack: ['TypeScript', 'React Native'],
+    // sourceCode: 'https://github.com',
+    livePreview:
+      'https://play.google.com/store/apps/details?id=com.eofficelite_rn',
   },
   {
-    name: 'Project 2',
+    name: 'Lesin Aja Mobile',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'A mobile app that provide platform to connect between student, parents, and soon-to-be tutor with payment history, student grades, and parents reviews. There are Admin, Student, and Tutor roles',
+    stack: ['TypeScript', 'React Native', 'Tailwind CSS'],
+    sourceCode: 'https://github.com/andirayka/lesinaja',
+    livePreview:
+      'https://play.google.com/store/apps/details?id=com.lesinajamobile',
   },
   {
-    name: 'Project 3',
-    description: '',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    name: 'Lesin Aja Web',
+    description:
+      'A mobile app that provide platform to connect between student, parents, and soon-to-be tutor with payment history, student grades, and parents reviews. There are Admin, Student, and Tutor roles',
+    stack: ['TypeScript', 'React', 'Tailwind CSS'],
+    sourceCode: 'https://github.com/andirayka/LesinAjaWeb',
+    livePreview: 'https://fir-react-basic-crud-29560.web.app/masuk',
   },
 ]
 
@@ -56,6 +59,7 @@ const skills = [
   'Redux/React Context',
   'Material UI',
   'Git',
+  'Tailwind CSS',
 ]
 
 const contact = {
