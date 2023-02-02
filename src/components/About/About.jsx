@@ -1,4 +1,4 @@
-// import './about.css'
+import './about.css'
 import { FaAward } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { VscFolderLibrary } from 'react-icons/vsc'
