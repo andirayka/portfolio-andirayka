@@ -1,5 +1,6 @@
 import './footer.css'
 import { FiInstagram } from 'react-icons/fi'
+import { socialList } from '../header/HeaderSocials'
 
 const Footer = () => {
   return (
@@ -30,9 +31,13 @@ const Footer = () => {
       </ul>
 
       <div className="footer_socials">
-        <a href="instagram.com" target="_blank">
-          <FiInstagram />
-        </a>
+        {socialList.map((item) => {
+          return (
+            <a href={item.href} target="_blank" rel="noreferrer">
+              <item.Icon />
+            </a>
+          )
+        })}
       </div>
 
       <div className="footer_copyright">

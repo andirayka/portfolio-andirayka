@@ -24,7 +24,7 @@ export const portfolioList = [
     image: IMG2,
     title: 'Lesin Aja Mobile',
     description:
-      'A mobile app that provide platform to connect between student, parents, and soon-to-be tutor with payment history, student grades, and parents reviews. There are Admin, Student, and Tutor roles.',
+      'A mobile app that provides a platform to connect students, parents, and soon-to-be tutors with payment history, student grades, and parent reviews. There are Admin, Student, and Tutor roles.',
     githubLink: 'https://github.com/andirayka/lesinaja',
     githubText: 'Github',
     demoLink:
@@ -35,7 +35,7 @@ export const portfolioList = [
     image: IMG3,
     title: 'Lesin Aja Web',
     description:
-      'A mobile app that provide platform to connect between student, parents, and soon-to-be tutor with payment history, student grades, and parents reviews. There are Admin, Student, and Tutor roles.',
+      'The web version of Lesin Aja mobile. Having the same capabilities as the mobile version, intended for admin usage.',
     githubLink: 'https://github.com/andirayka/LesinAjaWeb',
     githubText: 'Github',
     demoLink: 'https://fir-react-basic-crud-29560.web.app/masuk',
@@ -44,7 +44,8 @@ export const portfolioList = [
   {
     image: IMG4,
     title: 'Pasar WA',
-    description: 'lorem',
+    description:
+      "A React-based website of the merchants' personal store. Customers can have a shopping list and then order the products via WhatsApp with a neatly formatted list.",
     githubLink: '',
     githubText: '',
     demoLink: '',
@@ -54,7 +55,7 @@ export const portfolioList = [
     image: IMG5,
     title: 'NodPay Mobile',
     description:
-      'Developing the UI of a Pakistan-based financial app for transferring money and financial planning.',
+      'Developing the app of a Pakistan-based financial app for transferring money and financial planning.',
     githubLink: '',
     githubText: '',
     demoLink: '',
@@ -73,7 +74,8 @@ export const portfolioList = [
   {
     image: IMG7,
     title: 'KPBU Mobile',
-    description: '',
+    description:
+      'A mobile version of the government application to submit and review reports, have discussions, and archive files. ',
     githubLink: '',
     githubText: '',
     demoLink: '',
@@ -95,7 +97,7 @@ const Portfolio = () => {
                 <img src={item.image} alt={item.title} />
               </div>
               <h3>{item.title}</h3>
-              {/* <p>{item.description}</p> */}
+              <p>{item.description}</p>
               <div className="portfolio_item-cta">
                 {item.githubLink !== '' && (
                   <a
