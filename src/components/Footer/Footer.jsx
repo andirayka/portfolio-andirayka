@@ -1,5 +1,4 @@
 import './footer.css'
-import { FiInstagram } from 'react-icons/fi'
 import { socialList } from '../header/HeaderSocials'
 
 const Footer = () => {
@@ -33,7 +32,12 @@ const Footer = () => {
       <div className="footer_socials">
         {socialList.map((item) => {
           return (
-            <a href={item.href} target="_blank" rel="noreferrer">
+            <a
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+            >
               <item.Icon />
             </a>
           )

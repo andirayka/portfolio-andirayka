@@ -13,7 +13,6 @@ const servicesList2 = [
   'Implementing design from Figma or Zeplin to the webiste.',
   'Using UI libraries such as Mantine, Material UI, Tailwind CSS, etc.',
   'Implementing CSS from scratch.',
-  'Building a responsive website.',
   'Implementing Google Analytics perpage.',
 ]
 const servicesList3 = [
