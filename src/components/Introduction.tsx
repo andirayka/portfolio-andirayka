@@ -42,7 +42,7 @@ const Introduction = () => {
 
       {/* Scroll Down */}
       <a
-        className="rotate-90 text-primary text-lg absolute right-0 bottom-1/2"
+        className="rotate-90 text-primary text-lg absolute right-0 bottom-1/2 hover:text-white transition duration-300 ease-in"
         href=""
       >
         Scroll Down
