@@ -19,17 +19,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Andi Rayka - Frontend Developer",
   description:
-    "Frontend developer specializing in building responsive and performant web applications",
+    "Frontend developer specializing in building responsive and performant web applications with React, Next.js, and TypeScript",
   keywords: [
     "frontend developer",
     "web development",
     "React",
     "Next.js",
-    "TypeScript",
+    "UI/UX",
   ],
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#000000",
+  twitter: {
+    card: "summary_large_image",
+    title: "Andi Rayka - Frontend Developer",
+    description:
+      "Frontend developer specializing in building responsive and performant web applications",
+  },
 };
 
 export default function RootLayout({

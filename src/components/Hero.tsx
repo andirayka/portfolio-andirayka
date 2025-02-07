@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { portfolioConfig } from "@/config/portfolio";
+import { FiMapPin } from "react-icons/fi";
 
 export default function Hero() {
   const { personal, socialLinks } = portfolioConfig;
@@ -43,13 +44,7 @@ export default function Hero() {
       </div>
 
       <div className="flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground/90 transition-colors duration-300">
-        <Image
-          src="/icons/location.svg"
-          alt="Location icon"
-          width={16}
-          height={16}
-          className="dark:invert"
-        />
+        <FiMapPin className="w-4 h-4" />
         <span>{personal.location}</span>
       </div>
     </section>
