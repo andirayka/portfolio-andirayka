@@ -1,11 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import { portfolioConfig } from "@/config/portfolio";
 import { FiMapPin } from "react-icons/fi";
+import { FaLinkedin, FaEnvelope, FaFile } from "react-icons/fa";
+import { portfolioConfig } from "@/config/portfolio";
 
 export default function Hero() {
   const { personal, socialLinks } = portfolioConfig;
+
+  const getIconComponent = (iconName: string) => {
+    switch (iconName) {
+      case "FaLinkedin":
+        return <FaLinkedin className="w-6 h-6" />;
+      case "FaEnvelope":
+        return <FaEnvelope className="w-6 h-6" />;
+      case "FaFile":
+        return <FaFile className="w-6 h-6" />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center gap-6 px-4 py-16 sm:py-32 bg-background">
@@ -29,16 +42,11 @@ export default function Hero() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full hover:bg-foreground/10 transition-all duration-300 hover:scale-110"
+            className="flex items-center gap-2 p-2 rounded-lg hover:bg-foreground/10 transition-all duration-300 hover:scale-105"
             aria-label={link.platform}
           >
-            <Image
-              src={`/icons/${link.icon}.svg`}
-              alt={`${link.platform} icon`}
-              width={24}
-              height={24}
-              className="dark:invert transition-transform duration-300"
-            />
+            {getIconComponent(link.icon)}
+            <span className="text-sm font-medium">{link.platform}</span>
           </a>
         ))}
       </div>

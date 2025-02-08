@@ -301,12 +301,17 @@ export const portfolioConfig: PortfolioConfig = {
     {
       platform: "LinkedIn",
       url: "https://linkedin.com/in/andirayka",
-      icon: "linkedin",
+      icon: "FaLinkedin",
     },
     {
-      platform: "Portfolio",
-      url: "https://andirayka.netlify.app",
-      icon: "globe",
+      platform: "Email",
+      url: "mailto:andi.rayka@gmail.com",
+      icon: "FaEnvelope",
+    },
+    {
+      platform: "CV",
+      url: "https://docs.google.com/document/d/1Ax7kl511fckpd-HKFmZGoxAjrS9SAg8m/edit",
+      icon: "FaFile",
     },
   ],
 };
