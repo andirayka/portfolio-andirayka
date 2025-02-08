@@ -1,6 +1,6 @@
 "use client";
 
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaGlobe } from "react-icons/fa";
 import { portfolioConfig } from "@/config/portfolio";
 import Image from "next/image";
 
@@ -13,7 +13,7 @@ export default function Projects() {
         <div className="flex items-center justify-center gap-3 mb-12">
           <FaCode className="w-6 h-6 text-foreground/90" />
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground">
-            Featured Projects
+            My Projects
           </h2>
         </div>
 
@@ -23,10 +23,10 @@ export default function Projects() {
               key={project.id}
               className="group p-6 rounded-lg bg-foreground/5 hover:bg-foreground/10 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
-              {project.image && (
+              {project.imageUrl && (
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src={project.image}
+                    src={project.imageUrl}
                     alt={`${project.title} preview`}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -61,30 +61,18 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-300"
                   >
-                    <Image
-                      src="/globe.svg"
-                      alt="Live demo"
-                      width={16}
-                      height={16}
-                      className="dark:invert"
-                    />
+                    <FaGlobe className="w-4 h-4" />
                     Live Demo
                   </a>
                 )}
-                {project.repoUrl && (
+                {project.githubUrl && (
                   <a
-                    href={project.repoUrl}
+                    href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-300"
                   >
-                    <Image
-                      src="/file.svg"
-                      alt="Source code"
-                      width={16}
-                      height={16}
-                      className="dark:invert"
-                    />
+                    <FaCode className="w-4 h-4" />
                     Source Code
                   </a>
                 )}

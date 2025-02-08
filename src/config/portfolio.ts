@@ -1,12 +1,13 @@
+import { StaticImageData } from "next/image";
+
 interface Project {
   id: string;
   title: string;
   description: string;
   technologies: string[];
-  imageUrl?: string;
+  imageUrl?: StaticImageData | string;
   liveUrl?: string;
   githubUrl?: string;
-  featured: boolean;
 }
 
 interface Experience {
@@ -181,8 +182,8 @@ export const portfolioConfig: PortfolioConfig = {
   ],
   projects: [
     {
-      id: "proj1",
-      title: "ABBA Maintenance App",
+      id: "ABBA Scheduling App",
+      title: "ABBA Scheduling App",
       description:
         "Led the development of a cross-platform application for cleaner schedule management. Implemented location-based assignment system that reduced manual effort from 7 minutes to 20 seconds.",
       technologies: [
@@ -192,15 +193,108 @@ export const portfolioConfig: PortfolioConfig = {
         "TRPC",
         "Google Maps API",
       ],
-      featured: true,
+      imageUrl: "/portfolio/abba.png",
     },
     {
-      id: "proj2",
+      id: "Nusapay",
+      title: "Nusapay",
+      description:
+        "Developed and Maintained the Nusapay Merchant mobile application used for money transfer by merchants in Indonesia.",
+      technologies: ["React Native", "Redux", "RESTful APIs"],
+      liveUrl:
+        "https://play.google.com/store/apps/details?id=id.nusa.nusapay.merchant",
+      imageUrl: "/portfolio/nusapay.png",
+    },
+    {
+      id: "Maideasy",
+      title: "Maideasy",
+      description:
+        "Maintained the Maideasy mobile application (50k+ downloads) used to find domestic helpers in Malaysia. Responsibilities included modifying features and fixing bugs.",
+      technologies: ["React Native", "Redux", "RESTful APIs"],
+      liveUrl: "https://play.google.com/store/apps/details?id=com.maideasy.app",
+      imageUrl: "/portfolio/maideasy.png",
+    },
+    {
+      id: "Ecoloop Partner",
       title: "Ecoloop Partner",
       description:
         "Built a comprehensive waste management mobile application from scratch. Implemented core functionalities and successfully deployed to Google Play Store.",
       technologies: ["React Native", "TypeScript", "Redux", "RESTful APIs"],
-      featured: true,
+      liveUrl:
+        "https://play.google.com/store/apps/details?id=com.ecoloop_rn&hl=es",
+      imageUrl: "/portfolio/ecoloop.png",
+    },
+    {
+      id: "IntegreOffice Cloud",
+      title: "IntegreOffice Cloud",
+      description:
+        "A mailing application to send mail, disposition, and instruction within one instituion.",
+      technologies: ["React Native"],
+      liveUrl:
+        "https://play.google.com/store/apps/details?id=com.eofficelite_rn",
+      imageUrl: "/portfolio/ioc.png",
+    },
+    {
+      id: "Masjied.com",
+      title: "Masjied.com",
+      description: "A Next Js app to find nearest mosques in Southeast Asia",
+      technologies: ["Next.js"],
+      imageUrl: "/portfolio/masjied.png",
+      liveUrl: "masjied.com",
+    },
+    {
+      id: "Lesin Aja Mobile",
+      title: "Lesin Aja Mobile",
+      description:
+        "A mobile app that provides a platform to connect students, parents, and soon-to-be tutors with payment history, student grades, and parent reviews. There are Admin, Student, and Tutor roles.",
+      technologies: ["React Native"],
+      githubUrl: "https://github.com/andirayka/lesinaja",
+      liveUrl:
+        "https://play.google.com/store/apps/details?id=com.lesinajamobile",
+      imageUrl: "/portfolio/lesinajamobile.png",
+    },
+    {
+      id: "Lesin Aja Web",
+      title: "Lesin Aja Web",
+      description:
+        "The web version of Lesin Aja mobile. Having the same capabilities as the mobile version, intended for admin usage.",
+      technologies: ["React JS", "Vite", "Tailwind CSS", "Firebase Database"],
+      githubUrl: "https://github.com/andirayka/LesinAjaWeb",
+      liveUrl: "https://fir-react-basic-crud-29560.web.app/masuk",
+      imageUrl: "/portfolio/lesinajaweb.png",
+    },
+    {
+      id: "Pasar WA",
+      title: "Pasar WA",
+      description:
+        "A React-based website of the merchants' personal store. Customers can have a shopping list and then order the products via WhatsApp with a neatly formatted list.",
+      technologies: ["React JS"],
+      imageUrl: "/portfolio/pasarwa.png",
+    },
+    {
+      id: "NodPay Mobile",
+      title: "NodPay Mobile",
+      description:
+        "Developing the app of a Pakistan-based financial app for transferring money and financial planning.",
+      technologies: ["React Native"],
+      liveUrl: "https://www.nodpay.app/",
+      imageUrl: "/portfolio/nodpay.png",
+    },
+    {
+      id: "Châteaux de' Café",
+      title: "Châteaux de' Café",
+      description:
+        "Developing a seat and food reservation app for customer, and cashier app for management.",
+      technologies: ["React Native"],
+      imageUrl: "/portfolio/chateaux.png",
+    },
+    {
+      id: "KPBU Mobile",
+      title: "KPBU Mobile",
+      description:
+        "A mobile version of the government application to submit and review reports, have discussions, and archive files.",
+      technologies: ["React Native"],
+      imageUrl: "/portfolio/kpbu.png",
     },
   ],
   socialLinks: [
