@@ -3,9 +3,24 @@
 import { FaCode, FaGlobe } from "react-icons/fa";
 import { portfolioConfig } from "@/config/portfolio";
 import Image from "next/image";
+import { useState, useMemo } from "react";
 
 export default function Projects() {
   const { projects } = portfolioConfig;
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+
+  const categories = ["All", "Web", "Mobile"];
+
+  const filteredProjects = useMemo(() => {
+    if (activeCategory === "All") return projects;
+    return projects.filter((project) =>
+      project.technologies.some((tech) =>
+        activeCategory === "Web"
+          ? ["React JS", "Next.js", "Vite"].includes(tech)
+          : ["React Native"].includes(tech)
+      )
+    );
+  }, [projects, activeCategory]);
 
   return (
     <section className="py-16 sm:py-32 px-4 bg-background">
@@ -17,8 +32,24 @@ export default function Projects() {
           </h2>
         </div>
 
+        <div className="flex gap-2 mb-8 justify-center">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 py-2 text-sm rounded-lg transition-all duration-200 hover:scale-105 ${
+                activeCategory === category
+                  ? "bg-foreground/60 text-foreground font-semibold shadow-md transform scale-105 border border-foreground/20"
+                  : "bg-foreground/10 text-foreground/70 hover:bg-foreground/20"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
               className="group p-6 rounded-lg bg-foreground/5 hover:bg-foreground/10 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
