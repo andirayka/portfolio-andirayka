@@ -8,10 +8,11 @@ export default function AnimatedBackground() {
   const { theme } = useTheme();
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current!;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+    // Early return if context is not available
     if (!ctx) return;
 
     // Set canvas dimensions
