@@ -65,7 +65,7 @@ export default function Hero() {
       >
         <motion.div variants={itemVariants} className="mb-6">
           <span className="inline-block px-4 py-2 rounded-full bg-foreground/10 text-foreground/80 text-sm font-medium mb-4 backdrop-blur-sm">
-            Senior Frontend Developer
+            Frontend Developer
           </span>
           <h1 className="text-5xl sm:text-7xl font-bold mb-4 tracking-tight">
             <span className="gradient-text">{personal.name}</span>
